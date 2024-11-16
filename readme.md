@@ -48,3 +48,8 @@ uvicorn main:app --reload
 ```
 
 The server will start at `http://localhost:8000`. The `--reload` flag enables auto-reload on code changes.
+
+Alternative way of explicit mentions of running things app
+```
+uvicorn app.index:app --reload --host 0.0.0.0 --port 8000
+```
