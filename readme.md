@@ -20,3 +20,31 @@ A FastAPI-based WhatsApp bot that processes medical images and provides AI-power
 ## Environment Variables
 
 Create a `.env` file with the following variables:
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd medical-assistant-whatsapp-bot
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up your environment variables in `.env` file
+
+5. Run the development server:
+```bash
+uvicorn main:app --reload
+```
+
+The server will start at `http://localhost:8000`. The `--reload` flag enables auto-reload on code changes.
