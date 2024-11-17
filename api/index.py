@@ -1,14 +1,15 @@
 from fastapi import FastAPI, Request
-from llama import Llama
-from whatsapp import WhatsAppAPI
+from api.llama import Llama
+from api.whatsapp import WhatsAppAPI
 import os
 from dotenv import load_dotenv
 from botocore.config import Config
 import boto3
 import logging
 import asyncio
+from groq import Groq
 
-load_dotenv()
+load_dotenv(dotenv_path="../.env") # ensure to specify where the .env will go TODO
 
 app = FastAPI()
 
@@ -19,6 +20,12 @@ AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
 AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 S3_BUCKET = os.getenv("S3_BUCKET")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+print(GROQ_API_KEY)
+print(GROQ_API_KEY)
+print(PHONE_NUMBER_ID)
+print()
+
 
 # Initialize Clients
 groq_client = Groq(api_key=GROQ_API_KEY)
