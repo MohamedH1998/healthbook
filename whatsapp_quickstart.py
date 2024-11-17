@@ -10,10 +10,11 @@ import asyncio
 # --------------------------------------------------------------
 
 load_dotenv()
-ACCESS_TOKEN = "EAAHwBB4Q1v8BOZB2olAJrLQqc4ZANGxXzwtZAZC3FTLZAFfN7pnelt7AO9ZA6iM2TIQLfQZBeMzzzLPtZBHJPZCkmRM3qWlYIzaz85zGlEvzcaIZCDQEjx0YXOLhGsT5ifZA6m6X5Md4YV2vAZBvLdbOlpAXffsQP3cC8YRZCJ8xMDEEZA9gEsh0J79V9mg1FZA4TjiGolULCfM2MuqM5FKUqZB3iKy7GqklANw8v9UbxMQINc2V"
-RECIPIENT_WAID = "447463655069" # Telephone number
-PHONE_NUMBER_ID = "510586342128222"
-VERSION = "v21.0"
+
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+RECIPIENT_WAID = os.getenv("RECIPIENT_WAID")
+PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
+VERSION = os.getenv("VERSION")
 
 APP_ID = os.getenv("APP_ID")
 APP_SECRET = os.getenv("APP_SECRET")
@@ -85,13 +86,27 @@ def send_message(data):
 
 data = get_text_message_input(
     recipient=RECIPIENT_WAID, text="""
-*Welcome to Healthbook!*
+I can see you have a cut on your hand that's bleeding. While I can provide first aid guidance, please remember I'm cannot provide direct medical treatment.
+
+⚠️ *Please seek in-person medical care if*:
+- The bleeding doesn't stop with pressure
+- The cut is deep or gaping
+
+Reply for guidance on properly cleaning and bandaging the wound
+"""
+)
+
+'''
+data = get_text_message_input(
+    recipient=RECIPIENT_WAID, text="""
+*Welcome to Healthbook!* 🏥
 
 I’m here to help you easily track your health and securely store your healthcare information. Simply reply here, and I’ll guide you step by step—no forms, no hassle. Let's get started on improving your health together! 😊
 
-To start, can I get your name?
+👉 How can I assist you with your health today?
 """
 )
+'''
 
 response = send_message(data)
 
@@ -135,10 +150,10 @@ def get_text_message_input(recipient, text):
         }
     )
 
-
+'''
 data = get_text_message_input(
-    recipient=RECIPIENT_WAID, text="Hello, this is a test message."
-)
+    recipient=RECIPIENT_WAID, text="Hello, this is groq taking over the world!"
+)'''
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(send_message(data))
