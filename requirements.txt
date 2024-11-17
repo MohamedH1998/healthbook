@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+boto3
+aiohttp
+groq
+geopy
+httpx
+python-multipart
+pinecone-client
+langchain-openai
+llama-cpp-python>=0.2.0
+langchain-community

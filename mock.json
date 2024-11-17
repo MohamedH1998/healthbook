@@ -1,0 +1,24 @@
+{
+  "conditions": ["migraine", "migraine", "migraine"],
+  "symptoms": [],
+  "medications": ["ibuprofen", "ibuprofen", "ibuprofen"],
+  "incidents": [],
+  "body_parts": ["head", "head", "head"],
+  "chronological_events": [
+    {
+      "date": "2024-11-17T07:12:00.930396",
+      "content": "Patient complains of severe headache",
+      "type": "symptom"
+    },
+    {
+      "date": "2024-11-17T07:12:00.930425",
+      "content": "Patient complains of severe headache",
+      "type": "symptom"
+    },
+    {
+      "date": "2024-11-17T07:12:00.930438",
+      "content": "Patient complains of severe headache",
+      "type": "symptom"
+    }
+  ]
+}
