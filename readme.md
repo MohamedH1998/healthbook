@@ -49,14 +49,14 @@ We turn a simple WhatsApp conversation into a powerful medical records. Llama-po
 
 Create a `.env` file with the following variables:
 
-WHATSAPP_TOKEN=
-VERIFY_TOKEN=
-PHONE_NUMBER_ID=
+- WHATSAPP_TOKEN=
+- VERIFY_TOKEN=
+- PHONE_NUMBER_ID=
 
-GROQ_API_KEY=
-AWS_ACCESS_KEY=
-AWS_SECRET_KEY=
-S3_BUCKET=
+- GROQ_API_KEY=
+- AWS_ACCESS_KEY=
+- AWS_SECRET_KEY=
+- S3_BUCKET=
 
 ## Local Development
 
